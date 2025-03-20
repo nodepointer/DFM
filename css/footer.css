@@ -1,0 +1,138 @@
+/* 
+ * Dalton's Family Medicine
+ * Footer Styles
+ */
+
+/* Contact Footer Styles */
+footer#contact {
+    background-color: var(--color-gray);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  .contact-heading {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .contact-heading h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    color: white;
+    position: relative;
+  }
+  
+  .contact-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .location-section, .connect-section {
+    flex: 1;
+    text-align: center;
+    margin-left: 50px;
+  }
+  
+  .location-section h3, .connect-section h3 {
+    font-size: 1.0rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+  }
+  
+  .location-section p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: white;
+    font-size: 0.95rem;
+  }
+  
+  .location-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 15px;
+    color: white;
+    font-size: 0.95rem;
+  }
+  
+  .location-section i {
+    font-size: 24px;
+    margin-bottom: 15px;
+    display: inline-block;
+  }
+  
+  .connect-section i {
+    color: white;
+    margin-right: 10px;
+    font-size: 1.2rem;
+    width: 20px;
+    text-align: center;
+  }
+  
+  .connect-section p {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    margin-bottom: 15px;
+    color: white;
+    font-size: 0.95rem;
+    margin-left: 60px;
+  }
+  
+  .location-section a, .connect-section a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .location-section a:hover, .connect-section a:hover {
+    color: var(--color-cream);
+  }
+  
+  .divider {
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
+  
+  .new-friend-tag {
+    color: #777777;
+    margin-left: 10px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+  
+  /* Main Footer */
+  footer#footer {
+    background-color: var(--color-gray);
+    color: white;
+    padding: 80px 0 100px;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .footer-logo {
+    max-width: 100px;
+  }
