@@ -37,10 +37,10 @@
   }
   
   .hero-image img {
-    height: 100%; /* Keep the height at 100% */
-    width: auto; /* Allow width to be natural based on aspect ratio */
-    object-fit: contain; /* Changed from cover to contain */
-    max-width: none; /* Override the max-width: 100% that might be applied */
+    height: 100%;
+    width: 100%; /* Change from auto to 100% */
+    object-fit: cover; /* Change back to cover from contain */
+    max-width: 100%; /* Override the removal you had */
   }
   
   .carousel-controls {
