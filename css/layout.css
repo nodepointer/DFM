@@ -34,11 +34,9 @@
   
   /* Full-width containers */
   .full-width-video-container {
-    width: 100vw; /* Full viewport width */
+    width: 100%; /* Full viewport width */
     position: relative;
     overflow: hidden;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    /* left: 50%;
+    right: 50%; */
   }
