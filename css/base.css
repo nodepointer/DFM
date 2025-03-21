@@ -1,0 +1,44 @@
+/* 
+ * Dalton's Family Medicine
+ * Base Styles - Variables, Reset, Typography
+ */
+
+/* Color Variables */
+:root {
+    --color-brown: #302720;
+    --color-cream: #d1cfb9;
+    --color-green: #4b5943;
+    --color-gray: #3d3e40;
+    --color-light-gray: #62625e;
+  }
+  
+  /* Reset and Base Styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+  }
+  
+  body {
+    color: var(--color-gray);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Add this line */
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto; /* Add this line */
+  }
+  
+  /* Add padding to body when header becomes sticky to prevent content jump */
+  body.sticky-header {
+    padding-top: 250px; /* Adjusted based on header height (logo + nav) */
+  }
