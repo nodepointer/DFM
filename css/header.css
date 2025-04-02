@@ -1,0 +1,116 @@
+/* 
+ * Dalton's Family Medicine
+ * Header & Navigation Styles
+ */
+
+/* Header & Navigation - Controls the main site header and navigation menu */
+header {
+  width: 100%;                      /* Makes header span full width of page */
+  z-index: 1000;                    /* Ensures header appears above other content */
+  transition: all 0.3s ease;        /* Adds smooth transition for any changes (like sticky header) */
+}
+
+header.sticky {
+  position: fixed;                  /* Fixes header to viewport when sticky class is applied */
+  top: 0;                           /* Positions at top of viewport */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Adds shadow for depth when sticky */
+}
+
+.top-header {
+  background-color: var(--color-gray); /* Dark gray background from variables */
+  display: flex;                    /* Uses flexbox layout */
+  justify-content: center;          /* Centers content horizontally */
+  align-items: center;              /* Centers content vertically */
+  padding: 65px 0;                  /* Significant vertical padding to create height */
+  position: relative;               /* Establishes positioning context for absolute elements */
+}
+
+.logo-container {
+  display: flex;                    /* Uses flexbox layout */
+  flex-direction: column;           /* Stacks items vertically */
+  align-items: center;              /* Centers horizontally */
+  justify-content: center;          /* Centers vertically */
+  background-color: var(--color-gray); /* Matches top-header background */
+  padding: 20px;                    /* Space around logo */
+  position: absolute;               /* Takes out of normal flow */
+  width: 190px;                     /* Fixed width */
+  height: 190px;                    /* Fixed height (creates square) */
+  z-index: 1001;                    /* Positions above other elements including header */
+  box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.4); /* Adds shadow for depth */
+  margin-right: 10px;               /* Adds space to the right */
+  top: 50%;                         /* Initial vertical positioning */
+  transform: translateY(-20%);      /* Adjusts vertical position (overridden by next line) */
+  left: 50%;                        /* Centers horizontally from left edge */
+  transform: translate(-50%, -30%); /* Centers horizontally and adjusts vertically (overrides previous transform) */
+  overflow: visible;                /* Allows content to extend beyond container boundaries */
+}
+
+.logo {
+  max-width: 235px;                 /* Limits logo width */
+  height: auto;                     /* Maintains aspect ratio */
+  position: relative;               /* Enables positioning adjustments */
+  top: -8px;                        /* Shifts logo up slightly */
+  z-index: 1002;                    /* Places logo above container */
+}
+
+.tagline {
+  color: white;                     /* White text color */
+  font-size: 0.8rem;                /* Small font size */
+  text-transform: uppercase;        /* Converts text to uppercase */
+  letter-spacing: 1px;              /* Adds spacing between letters */
+  position: absolute;               /* Takes out of normal flow */
+  left: 230px;                      /* Positions to right of logo */
+  top: 50%;                         /* Centers vertically */
+  transform: translateY(-50%);      /* Fine-tunes vertical centering */
+  white-space: nowrap;              /* Prevents line breaks */
+}
+
+.main-nav {
+  background-color: var(--color-light-gray); /* Lighter gray background for navigation */
+  padding: 15px 0;                  /* Vertical padding */
+  margin-bottom: 0;                 /* Removes bottom margin */
+}
+
+.nav-container {
+  display: flex;                    /* Uses flexbox layout */
+  justify-content: space-between;   /* Spreads navigation items to edges */
+  max-width: 1200px;                /* Limits width for larger screens */
+  margin: 0 auto;                   /* Centers container */
+  padding: 0 20px;                  /* Horizontal padding */
+}
+
+.left-menu,
+.right-menu {
+  display: flex;                    /* Uses flexbox for menu items */
+  list-style: none;                 /* Removes bullet points */
+  align-items: center;              /* Vertically centers menu items */
+}
+
+.left-menu li,
+.right-menu li {
+  margin: 0 15px;                   /* Horizontal spacing between menu items */
+}
+
+.left-menu a,
+.right-menu a {
+  color: white;                     /* White text for navigation links */
+  text-decoration: none;            /* Removes underlines */
+  text-transform: uppercase;        /* Makes text ALL CAPS */
+  font-size: 1rem;                  /* Sets font size */
+  letter-spacing: 1px;              /* Adds spacing between letters */
+  padding: 10px 5px;                /* Padding around links (creates larger hit area) */
+  transition: all 0.3s ease;        /* Smooth transition for hover effects */
+}
+
+.left-menu a:hover,
+.right-menu a:hover {
+  color: var(--color-cream);        /* Changes text color on hover to cream */
+}
+
+.left-menu a.active,
+.right-menu a.active {
+  color: white;                     /* White text for active links */
+  font-weight: bold;                /* Makes active links bold */
+  border-bottom: 2px solid white;   /* Adds white underline to active links */
+  padding-bottom: 5px;              /* Adjusts padding to accommodate underline */
+}

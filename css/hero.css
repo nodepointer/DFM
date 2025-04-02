@@ -1,0 +1,176 @@
+/* 
+ * Dalton's Family Medicine
+ * Hero Section & Carousel Styles
+ */
+
+/* Hero Section - The main banner area at the top of the homepage */
+.hero {
+  background-color: #f0f0f0;       /* Light gray background */
+  display: flex;                    /* Uses flexbox layout */
+  flex-direction: column;           /* Stacks children vertically */
+  align-items: center;              /* Centers items horizontally */
+  text-align: center;               /* Centers text */
+  padding-top: 0;                   /* No padding at top */
+  margin-top: 0;                    /* No margin at top */
+}
+
+.hero-carousel {
+  width: 100%;                      /* Full width container */
+  position: relative;               /* Creates positioning context for absolute elements */
+  overflow: hidden;                 /* Hides content that extends beyond container */
+  margin-top: 0;                    /* No margin at top */
+}
+
+.hero-carousel-inner {
+  display: flex;                    /* Uses flexbox for horizontal slides */
+  transition: transform 0.5s ease;  /* Smooth animation for slide transitions */
+  height: 400px;                    /* Fixed height for carousel */
+  position: relative;               /* Enables positioning */
+  left: 0;                          /* Initial position (will be changed by JavaScript) */
+}
+
+.hero-image {
+  flex: 0 0 auto;                   /* Prevents flexbox items from growing or shrinking */
+  height: 400px;                    /* Fixed height matching carousel */
+  overflow: hidden;                 /* Hides overflow content */
+  position: relative;               /* Creates positioning context */
+}
+
+.hero-image img {
+  height: 100%;                     /* Full height of container */
+  width: 100%;                      /* Full width of container */
+  object-fit: cover;                /* Ensures image covers area while maintaining aspect ratio */
+  max-width: 100%;                  /* Prevents image from exceeding container width */
+}
+
+.carousel-controls {
+  position: absolute;               /* Takes out of normal flow */
+  top: 50%;                         /* Centers vertically */
+  width: 100%;                      /* Full width of carousel */
+  display: flex;                    /* Uses flexbox */
+  justify-content: space-between;   /* Places previous/next buttons at edges */
+  transform: translateY(-50%);      /* Fine-tunes vertical centering */
+  z-index: 10;                      /* Ensures controls appear above slides */
+}
+
+.carousel-controls button {
+  background-color: #ffffff00;      /* Transparent background (uses 8-digit hex with 00 alpha) */
+  color: white;                     /* White text/icon color */
+  border: none;                     /* No border */
+  width: 40px;                      /* Fixed width */
+  height: 40px;                     /* Fixed height (creates circle with border-radius) */
+  border-radius: 50%;               /* Creates circular buttons */
+  font-size: 20px;                  /* Size for arrow icons */
+  cursor: pointer;                  /* Shows pointer cursor on hover */
+  display: flex;                    /* Uses flexbox */
+  align-items: center;              /* Centers content vertically */
+  justify-content: center;          /* Centers content horizontally */
+  margin: 0 10px;                   /* Horizontal margin */
+}
+
+.carousel-indicators {
+  display: flex;                    /* Uses flexbox */
+  justify-content: center;          /* Centers indicators horizontally */
+  display: flex;                    /* Duplicate property */
+  justify-content: center;          /* Duplicate property */
+  position: absolute;               /* Takes out of normal flow */
+  bottom: 20px;                     /* Position from bottom */
+  left: 0;                          /* Spans full width */
+  right: 0;                         /* Spans full width */
+  z-index: 10;                      /* Ensures indicators appear above slides */
+}
+
+.carousel-indicator {
+  width: 10px;                      /* Fixed width for indicator dots */
+  height: 10px;                     /* Fixed height for indicator dots */
+  border-radius: 50%;               /* Creates circular indicators */
+  background-color: #ffffff;        /* White dots by default */
+  margin: 0 5px;                    /* Horizontal spacing between dots */
+  cursor: pointer;                  /* Shows pointer cursor on hover */
+}
+
+.carousel-indicator.active {
+  background-color: var(--color-green); /* Green color for active indicator */
+}
+
+.hero-tagline {
+  background-color: var(--color-green); /* Green background for tagline section */
+  color: white;                     /* White text */
+  padding: 65px 20px;               /* Vertical and horizontal padding */
+  width: 100%;                      /* Full width */
+  display: flex;                    /* Uses flexbox */
+  justify-content: center;          /* Centers content horizontally */
+}
+
+.moto-text {
+  line-height: 1.8;                 /* Increased line height for readability */
+  max-width: 1000px;                /* Limits width for better readability */
+  text-transform: uppercase;        /* Makes text ALL CAPS */
+  letter-spacing: 2px;              /* Adds significant spacing between letters */
+  font-size: 1.2rem;                /* Text size */
+  position: relative;               /* Enables positioning */
+  display: flex;                    /* Uses flexbox */
+  color: #d1cfb9;                   /* Cream text color (matches --color-cream variable) */
+}
+
+/* Video Player Styles - For embedded video in the hero or elsewhere */
+#dpcVideo {
+  width: 100%;                      /* Full width container */
+  height: auto;                     /* Maintains aspect ratio */
+  display: block;                   /* Removes default inline spacing */
+  background-color: var(--color-cream); /* Cream background for video area */
+  object-fit: cover;                /* Ensures video covers container while maintaining aspect ratio */
+}
+
+/* Custom play button styling - Custom overlay play button for video */
+.video-play-button {
+  position: absolute;               /* Takes out of normal flow */
+  top: 50%;                         /* Centers vertically */
+  left: 50%;                        /* Centers horizontally */
+  transform: translate(-50%, -50%); /* Fine-tunes centering */
+  width: 80px;                      /* Fixed width */
+  height: 80px;                     /* Fixed height */
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+  border-radius: 50%;               /* Creates circular button */
+  display: none;                    /* Hidden by default, shown when autoplay fails */
+  justify-content: center;          /* Centers content horizontally */
+  align-items: center;              /* Centers content vertically */
+  cursor: pointer;                  /* Shows pointer cursor on hover */
+  z-index: 2;                       /* Ensures button appears above video */
+}
+
+.video-play-button span {
+  color: white;                     /* White play icon */
+  font-size: 36px;                  /* Large icon size */
+  margin-left: 5px;                 /* Slight adjustment to visually center the play symbol */
+}
+
+.video-play-button:hover {
+  background-color: var(--color-green); /* Green background on hover */
+}
+
+/* Our mission Section - Mission statement content area */
+.our-mission {
+  background-color: var(--color-cream); /* Cream background */
+  padding: 60px 40px;               /* Vertical and horizontal padding */
+  text-align: center;               /* Centers text */
+  max-width: 100%;                  /* Full width container */
+}
+
+.our-mission h2 {
+  margin-bottom: 20px;              /* Space below heading */
+  text-transform: uppercase;        /* Makes text ALL CAPS */
+  letter-spacing: 1px;              /* Adds spacing between letters */
+  font-size: 1.2rem;                /* Text size */
+  color: var(--color-gray);         /* Gray text color */
+}
+
+.our-mission p {
+  font-weight: bold;                /* Bold text */
+  font-style: italic;               /* Italic text */
+  max-width: 900px;                 /* Limits width for better readability */
+  margin: 0 auto;                   /* Centers container */
+  font-size: 0.95rem;               /* Text size */
+  line-height: 1.7;                 /* Increased line height for readability */
+  color: var(--color-gray);         /* Gray text color */
+}

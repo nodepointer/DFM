@@ -1,0 +1,146 @@
+/* 
+ * Dalton's Family Medicine
+ * Footer Styles
+ */
+
+/* Contact Footer Styles - Styling for the contact information section of the footer */
+footer#contact {
+  background-color: var(--color-gray);  /* Dark gray background using variable from color palette */
+  color: white;                         /* White text for good contrast against dark background */
+  padding: 40px 0;                      /* Vertical padding to create space above and below content */
+  text-align: center;                   /* Centers all text elements horizontally */
+}
+
+.contact-heading {
+  width: 100%;                          /* Full width container */
+  text-align: center;                   /* Centers the heading text */
+  margin-bottom: 30px;                  /* Space below the heading section */
+}
+
+.contact-heading h2 {
+  text-align: center;                   /* Centers the h2 text (redundant with parent) */
+  margin-bottom: 40px;                  /* Adds significant space below the h2 */
+  text-transform: uppercase;            /* Makes text ALL CAPS for emphasis */
+  letter-spacing: 1px;                  /* Adds slight spacing between letters */
+  font-size: 1.2rem;                    /* Sets the heading size */
+  color: white;                         /* Ensures white text color */
+  position: relative;                   /* Enables potential absolute positioning of pseudo-elements */
+}
+
+.contact-content {
+  display: flex;                        /* Uses flexbox layout */
+  justify-content: center;              /* Centers content horizontally */
+  align-items: flex-start;              /* Aligns items to the top */
+  max-width: 1000px;                    /* Limits width for better readability */
+  margin: 0 auto;                       /* Centers the container */
+  position: relative;                   /* Enables absolute positioning for child elements */
+}
+
+.location-section, .connect-section {
+  flex: 1;                              /* Makes both sections equal width */
+  text-align: center;                   /* Centers text within each section */
+  margin-left: 50px;                    /* Adds space to the left of each section */
+}
+
+.location-section h3, .connect-section h3 {
+  font-size: 1.0rem;                    /* Sets subheading size */
+  margin-bottom: 30px;                  /* Adds space below the subheadings */
+  text-transform: uppercase;            /* Makes text ALL CAPS */
+  letter-spacing: 1px;                  /* Adds slight spacing between letters */
+  color: white;                         /* Ensures white text color */
+}
+
+.location-section p {
+  display: flex;                        /* Uses flexbox for potential icon+text combinations */
+  align-items: center;                  /* Vertically centers content */
+  margin-bottom: 15px;                  /* Space between paragraphs */
+  color: white;                         /* Ensures white text color */
+  font-size: 0.95rem;                   /* Slightly smaller than default text size */
+}
+
+.location-content {
+  display: flex;                        /* Uses flexbox layout */
+  flex-direction: column;               /* Stacks items vertically */
+  align-items: center;                  /* Centers items horizontally */
+  justify-content: center;              /* Centers items vertically */
+  text-align: center;                   /* Centers text content */
+  margin-bottom: 15px;                  /* Space below each content block */
+  color: white;                         /* Ensures white text color */
+  font-size: 0.95rem;                   /* Slightly smaller than default text size */
+}
+
+.location-section i {
+  font-size: 24px;                      /* Sets icon size for location section */
+  margin-bottom: 15px;                  /* Space below each icon */
+  display: inline-block;                /* Allows margin to affect the element */
+}
+
+.connect-section i {
+  color: white;                         /* White color for icons */
+  margin-right: 10px;                   /* Space to the right of each icon */
+  font-size: 1.2rem;                    /* Sets icon size for connect section */
+  width: 20px;                          /* Fixed width for alignment */
+  text-align: center;                   /* Centers icons within their fixed width */
+}
+
+.connect-section p {
+  display: flex;                        /* Uses flexbox layout */
+  align-items: left;                    /* Aligns items to the left (non-standard property, should be 'flex-start') */
+  justify-content: left;                /* Aligns content to the left (non-standard property, should be 'flex-start') */
+  margin-bottom: 15px;                  /* Space below each paragraph */
+  color: white;                         /* Ensures white text color */
+  font-size: 0.95rem;                   /* Slightly smaller than default text size */
+  margin-left: 60px;                    /* Indent from the left edge */
+}
+
+.location-section a, .connect-section a {
+  color: white;                         /* White color for links */
+  text-decoration: none;                /* Removes underlines from links */
+  transition: color 0.3s ease;          /* Smooth transition for hover effect */
+}
+
+.location-section a:hover, .connect-section a:hover {
+  color: var(--color-cream);            /* Changes link color on hover to cream color */
+}
+
+.divider {
+  width: 1px;                           /* Very thin vertical line */
+  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
+  margin: 0;                            /* No margin */
+  position: absolute;                   /* Takes it out of normal flow */
+  top: 0;                               /* Aligns to top of container */
+  bottom: 0;                            /* Stretches to bottom of container */
+}
+
+.new-friend-tag {
+  color: #777777;                       /* Medium gray color */
+  margin-left: 10px;                    /* Space to the left */
+  font-size: 0.8rem;                    /* Smaller text size */
+  white-space: nowrap;                  /* Prevents wrapping to maintain tag appearance */
+}
+
+
+/* Main Footer - The very bottom footer section, typically containing copyright etc. */
+footer#footer {
+  background-color: var(--color-gray);  /* Dark gray background matching contact footer */
+  color: var(--color-gray);             /* Text color same as background (may be an error) */
+  padding: 30px 0 20px;                 /* Padding top and bottom */
+  margin-bottom: 0;                     /* No margin at bottom */
+  margin-top: 0;                        /* No margin at top */
+  border-bottom: none;                  /* No border at bottom */
+}
+
+body > footer#footer ~ * {
+  display: none !important;             /* Hides any elements that come after the footer in the DOM */
+}
+
+.footer-content {
+  display: flex;                        /* Uses flexbox layout */
+  justify-content: center;              /* Centers content horizontally */
+  max-width: 1000px;                    /* Limits width for better readability */
+  margin: 0 auto;                       /* Centers the container */
+}
+
+.footer-logo {
+  max-width: 100px;                     /* Limits the logo size */
+}

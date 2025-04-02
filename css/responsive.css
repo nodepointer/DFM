@@ -1,0 +1,1031 @@
+/* 
+ * Dalton's Family Medicine
+ * Responsive Styles for Various Screen Sizes
+ */
+
+/* ========================
+   TABLET STYLES (1024px)
+   ======================== */
+   @media (max-width: 1024px) {
+    /* Testimonials section - reduce size and adjust text for tablets */
+    .testimonial-slider {
+      max-width: 90%; /* Reduced from 100% likely */
+    }
+  
+    .testimonial p {
+      font-size: 1rem; /* Smaller text size */
+      line-height: 1.7; /* Increased line height for better readability */
+    }
+  
+    /* Services section - adjust dimensions and spacing for tablets */
+    .image-container {
+      height: 300px; /* Reduced height */
+    }
+  
+    .service-content h3 {
+      font-size: 18px; /* Smaller heading */
+      margin-bottom: 15px; /* Less space below heading */
+    }
+  
+    .service-content p {
+      margin: 10px 30px; /* Adjusted margins */
+      font-size: 13px; /* Smaller text */
+    }
+  
+    .content-columns {
+      gap: 15px; /* Reduced gap between columns */
+    }
+  }
+  
+  /* Hide collage container by default - will be shown in specific breakpoints */
+  .collage-container{
+    display: none;
+  }
+  
+  /* ========================
+     GLOBAL SETTINGS
+     ======================== */
+  html,
+  body {
+    height: auto; /* Allow content to determine height */
+    min-height: 100%; /* Ensure at least full viewport height */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  
+  /* Make sure sections are visible with minimum height */
+  section,
+  div[id],
+  footer[id] {
+    display: block;
+    min-height: 50px;
+  }
+  
+  /* ========================
+     MOBILE MENU STYLING
+     ======================== */
+  /* Position mobile menu button to follow scrolling */
+  .mobile-menu-button {
+    display: block;
+    position: absolute !important; /* Override other positioning */
+    right: 15px;
+    top: 15px;
+    background-color: transparent;
+  }
+  
+  /* Adjust position when header is sticky */
+  header.sticky .mobile-menu-button {
+    background-color: transparent;
+    position: fixed; /* Fix to viewport */
+    right: 15px;
+    top: 15px;
+  }
+  
+  /* Change hamburger color when header is sticky for visibility */
+  header.sticky .hamburger-icon span {
+    background: white;
+  }
+  
+  /* ========================
+     MOBILE STYLES (768px)
+     ======================== */
+  @media (max-width: 768px) {
+    /* Hamburger menu icon styling */
+    .hamburger-icon {
+      display: block;
+      position: relative;
+      width: 30px;
+      height: 24px;
+    }
+  
+    /* Create the three lines of the hamburger icon */
+    .hamburger-icon span {
+      display: block;
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background: white;
+      border-radius: 3px;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: 0.25s ease-in-out; /* Smooth transition for animation */
+    }
+  
+    /* Position each hamburger line */
+    .hamburger-icon span:nth-child(1) {
+      top: 0px; /* Top line */
+    }
+  
+    .hamburger-icon span:nth-child(2) {
+      top: 10px; /* Middle line */
+    }
+  
+    .hamburger-icon span:nth-child(3) {
+      top: 20px; /* Bottom line */
+    }
+  
+    /* Hamburger animation - transforms to X when menu is open */
+    .mobile-menu-open .hamburger-icon span:nth-child(1) {
+      top: 10px;
+      transform: rotate(135deg); /* Rotate top line */
+    }
+  
+    .mobile-menu-open .hamburger-icon span:nth-child(2) {
+      opacity: 0; /* Hide middle line */
+      left: -60px; /* Slide it away */
+    }
+  
+    .mobile-menu-open .hamburger-icon span:nth-child(3) {
+      top: 10px;
+      transform: rotate(-135deg); /* Rotate bottom line opposite direction */
+    }
+  
+    /* Navigation container adjustments */
+    .main-nav {
+      padding: 0;
+      transition: all 0.3s ease; /* Smooth transitions */
+      overflow: hidden;
+      min-height: 40px;
+      margin-top: 0;
+    }
+  
+    /* Header styling for mobile */
+    header {
+      background: #62625eba; /* Semi-transparent background */
+      padding: 0;
+    }
+  
+    /* Adjust top header size */
+    .top-header {
+      height: auto;
+      min-height: 100px; /* Reduced height for mobile */
+      max-height: 100px; /* Maximum height limit */
+      padding: 5px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #62625eba; /* Semi-transparent background */
+    }
+  
+    /* Mobile menu button styling */
+    .mobile-menu-button {
+      position: absolute !important;
+      right: 30px;
+      top: 30px;
+      background-color: transparent !important;
+      border: 0 !important;
+      outline: none !important;
+      padding: 0 !important;
+      z-index: 1001; /* Ensure it's above other elements */
+      box-shadow: none !important;
+    }
+  
+    /* Hamburger icon styling */
+    .hamburger-icon {
+      display: block;
+      position: relative;
+      width: 30px;
+      height: 24px;
+      background: transparent !important;
+      border: 0 !important;
+      box-shadow: none !important;
+    }
+  
+    /* Mobile hamburger icon lines */
+    .hamburger-icon span {
+      display: block;
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background: white;
+      border-radius: 3px;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: 0.25s ease-in-out;
+      box-shadow: none !important;
+      border: 0 !important;
+    }
+  
+    /* Logo container positioning for mobile */
+    .logo-container {
+      width: auto;
+      height: auto;
+      position: left;
+      transform: none;
+      left: 20px;
+      top: 0;
+      margin: 0;
+      padding: 10px 10px;
+      background: transparent;
+      box-shadow: none;
+      display: inline-block;
+    }
+  
+    /* Logo size adjustments */
+    .logo {
+      max-width: auto;
+      max-height: 100px;
+      margin: 0 auto;
+      display: block;
+    }
+  
+    /* Hide navigation by default on mobile */
+    .nav-container {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      padding: 0;
+      background-color: #62625ebb; /* Semi-transparent background */
+      position: absolute;
+      top: 100px; /* Position below header */
+      left: 0;
+      z-index: 1000;
+    }
+  
+    /* Show navigation when activated */
+    .nav-container.show {
+      display: flex;
+      width: 100%;
+    }
+  
+    /* Scroll menu button styling */
+    .scroll-menu-button {
+      background-color: transparent !important;
+      border: 0 !important;
+      box-shadow: none !important;
+      outline: none !important;
+    }
+  
+    /* Remove default button styling */
+    button {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+  
+    /* Stack menu items vertically on mobile */
+    .left-menu,
+    .right-menu {
+      flex-direction: column;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  
+    /* Reset margins for menu items */
+    .left-menu li:last-child {
+      margin: 0 0 0 0;
+    }
+    .right-menu li:first-child {
+      margin: 0 0 0 0;
+    }
+  
+    /* Style menu links for mobile */
+    .left-menu a,
+    .right-menu a {
+      display: block;
+      padding: 12px 5px;
+      font-size: 0.9rem;
+      min-height: 44px; /* Minimum touch target size */
+      line-height: 22px;
+    }
+  
+    /* Highlight menu items on touch */
+    .left-menu a:active,
+    .right-menu a:active {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  
+    /* Ensure logo stays visible when menu is open */
+    .mobile-menu-open .logo-container {
+      z-index: 1000;
+    }
+  
+    /* Container for logo and branding */
+    .brand-container {
+      display: flex;
+      align-items: center;
+    }
+  
+    /* Sticky header behavior adjustments */
+    header.sticky .main-nav {
+      position: static !important;
+    }
+  
+    /* Fix body padding when header is sticky */
+    body.sticky-header.mobile-menu-open {
+      padding-top: 0 !important;
+    }
+  
+    /* Tagline positioning */
+    .tagline {
+      position: absolute;
+      left: 100%;
+      transform: translateX(-50%);
+      text-align: center;
+      width: 100%;
+      color: #d1cfb9;
+    }
+  
+    /* Carousel margin adjustments */
+    .hero-carousel {
+      margin-bottom: 0;
+      bottom: 0;
+    }
+  
+    /* Hero tagline section styling */
+    .hero-tagline {
+      padding: 20px;
+      margin: 0;
+      background-color: #4d5d48; /* Green background */
+    }
+  
+    /* Body padding when header is sticky */
+    body.sticky-header {
+      padding-top: 200px;
+    }
+  
+    /* ========================
+       CAROUSEL ADJUSTMENTS
+       ======================== */
+    .hero-image {
+      height: 300px; /* Shorter height for mobile */
+      bottom: 0;
+    }
+  
+    /* Image fitting in carousel */
+    .hero-image img {
+      object-fit: cover; /* Ensure image fills space */
+    }
+  
+    /* Carousel height */
+    .hero-carousel-inner {
+      height: 300px;
+    }
+  
+    /* Carousel control buttons */
+    .carousel-controls button {
+      width: 36px;
+      height: 36px;
+      opacity: 0.8; /* More visible */
+      min-height: 44px; /* Minimum touch target size */
+      min-width: 44px;
+    }
+  
+    /* Carousel indicators positioning */
+    .carousel-indicators {
+      bottom: 5px;
+      margin-bottom: 0;
+      padding-bottom: 5px;
+    }
+  
+    /* Text size for motto */
+    .moto-text {
+      font-size: 1rem;
+      letter-spacing: 1px;
+      padding: 0 0;
+    }
+  
+    /* ========================
+       TESTIMONIAL SECTION
+       ======================== */
+    /* Testimonial navigation dots */
+    .testimonial-dot {
+      width: 12px; 
+      height: 12px; 
+      margin: 0 8px;
+      border-radius: 50%;
+      background-color: #d1cfb9;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  
+    /* Testimonial heading */
+    .testimonials h2 {
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 1.2rem;
+    }
+  
+    /* Testimonial track height */
+    .testimonial-track {
+      height: fit-content;
+    }
+  
+    /* Hide slider controls on mobile */
+    .slider-controls {
+      display: none;
+    }
+  
+    /* ========================
+       SERVICES SECTION
+       ======================== */
+    /* Box sizing reset */
+    .services-section * {
+      box-sizing: border-box;
+    }
+  
+    /* Stack service items instead of grid */
+    .services-section .services-grid {
+      display: block;
+    }
+  
+    /* Service item styling */
+    .services-section .service-item {
+      width: 100%;
+      margin-bottom: 30px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+  
+    /* ========================
+       COLLAGE SECTION
+       ======================== */
+    /* Main collage container */
+    .collage-container {
+      width: 100%;
+      max-width: 768px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 180px;
+      gap: 10px;
+      padding: 15px;
+    }
+  
+    /* Individual collage items */
+    .collage-item {
+      overflow: hidden;
+      border-radius: 8px;
+      position: relative;
+    }
+  
+    /* Collage images */
+    .collage-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease; /* Smooth hover effect */
+    }
+  
+    /* Hover effect for collage images */
+    .collage-item:hover img {
+      transform: scale(1.05); /* Slight zoom on hover */
+    }
+  
+    /* Grid placement for different collage items */
+    .college-img {
+      grid-column: span 2;
+      grid-row: span 1;
+    }
+  
+    .men-img {
+      grid-column: span 1;
+      grid-row: span 2;
+    }
+  
+    .seniors-img {
+      grid-column: span 1;
+      grid-row: span 1;
+    }
+  
+    .teenagers-img {
+      grid-column: span 2;
+      grid-row: span 1;
+    }
+  
+    .women-img {
+      grid-column: span 3;
+      grid-row: span 1;
+    }
+  
+    /* Mobile grid adjustments */
+    .collage-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+      grid-auto-rows: 150px; /* Shorter rows */
+    }
+  
+    /* Adjust span for different images */
+    .college-img,
+    .teenagers-img,
+    .women-img {
+      grid-column: span 2;
+    }
+  
+    .men-img,
+    .seniors-img {
+      grid-column: span 1;
+      grid-row: span 1;
+    }
+  
+    /* ========================
+       SERVICE ITEMS SECTION
+       ======================== */
+    /* Hide original service layout */
+    .services-section .image-container {
+      display: none;
+    }
+  
+    /* Using pseudo-elements to create headings for services */
+    /* Women's Health Service */
+    .services-section .service-item:nth-child(1)::before {
+      content: "Women's Health";
+      display: block;
+      padding: 15px;
+      background-color: #d1cfb9;
+      font-weight: bold;
+      font-size: 18px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+  
+    /* Women's Health Service Content */
+    .services-section .service-item:nth-child(1)::after {
+      content: "Complete physicals including pap smear breast exams, and skin checks.\A\ASkin care: Anti-wrinkle, mole removal, skin biopsies, cryotherapy to age spots.\A\AHormone replacement therapy: Improving energy, improving sleep pattern, increasing libido, reversing brain fog, avoiding weight gain associated with perimenopause into menopause, improve sexual health.\A\AMore Services: Weight loss strategy, increase hair growth, mental health check ups for depression and anxiety.\A\AManaging chronic disease states such as: diabetes, hypertension, elevated cholesterol, obesity, arthritis, obstructive sleep apnea, osteoporosis, eczema, psoriasis, asthma. COPD medical management to avoid medication interactions, complex medical cases to be coordinated with specialist.";
+      display: block;
+      white-space: pre-wrap; /* Preserve line breaks */
+      padding: 15px;
+      line-height: 1.5;
+    }
+  
+    /* Men's Health Service */
+    .services-section .service-item:nth-child(2)::before {
+      content: "Men's Health";
+      display: block;
+      padding: 15px;
+      background-color: #d1cfb9;
+      font-weight: bold;
+      font-size: 18px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+  
+    /* Men's Health Service Content */
+    .services-section .service-item:nth-child(2)::after {
+      content: "Complete physicals including skin exams, nutritional consultation, strength, training, goals, and exercise strategy.\A\AHormone replacement therapy: improve energy, improved muscle mass gain, improved libido, improved erection.\A• Hair loss treatment\A• Managing chronic disease states\A• Managing skin disease- including biopsy and mole removal if needed\A• Cryotherapy to remove age spots";
+      display: block;
+      white-space: pre-wrap;
+      padding: 15px;
+      line-height: 1.5;
+    }
+  
+    /* Teen Health Service */
+    .services-section .service-item:nth-child(3)::before {
+      content: "Teen Health";
+      display: block;
+      padding: 15px;
+      background-color: #d1cfb9;
+      font-weight: bold;
+      font-size: 18px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+  
+    /* Teen Health Service Content */
+    .services-section .service-item:nth-child(3)::after {
+      content: "Establishing a relationship to be able to take care of them through every decade of life.\A\A• Complete physicals\A• Sports physicals\A• Nutritional consultation\A• Skin care\A• Mental health check-in\A• ADHD/ADD\A• Allergies and asthma\A• Immune health";
+      display: block;
+      white-space: pre-wrap;
+      padding: 15px;
+      line-height: 1.5;
+    }
+  
+    /* College Students Service */
+    .services-section .service-item:nth-child(4)::before {
+      content: "College Students";
+      display: block;
+      padding: 15px;
+      background-color: #d1cfb9;
+      font-weight: bold;
+      font-size: 18px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+  
+    /* College Students Service Content */
+    .services-section .service-item:nth-child(4)::after {
+      content: "• Complete physical\A• STD testing\A• Convenient telemedicine appointments\A• Allergy and asthma treatment\A• Skin care\A• Weight loss management\A• Contraception management\A• Immune support\A• Mental health and stress check-ins\A• ADHD/ADD";
+      display: block;
+      white-space: pre-wrap;
+      padding: 15px;
+      line-height: 1.5;
+    }
+  
+    /* Senior Health Service */
+    .services-section .service-item:nth-child(5)::before {
+      content: "Senior Health";
+      display: block;
+      padding: 15px;
+      background-color: #d1cfb9;
+      font-weight: bold;
+      font-size: 18px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+  
+    /* Senior Health Service Content */
+    .services-section .service-item:nth-child(5)::after {
+      content: "• Complete physical and skin exam\A• Breast exams\A• Pelvic exams\A• Nutritional consultation\A• Skin care\A• Joint mobility improvement\A• Improving strength and flexibility\A• Chronic disease management\A• Coordination of health with specialist\A• Sexual health function\A• Mental health\A• Avoiding polypharmacy";
+      display: block;
+      white-space: pre-wrap;
+      padding: 15px;
+      line-height: 1.5;
+    }
+  
+    /* ========================
+       FOOTER SECTION
+       ======================== */
+    /* Footer spacing */
+    .connect-section p,
+    .location-section p {
+      margin-bottom: 20px;
+      line-height: 2;
+    }
+  
+    /* ========================
+       TEAM SECTION
+       ======================== */
+    /* Stack team members vertically */
+    .team-member,
+    .team-member.reverse {
+      flex-direction: column;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+  
+    /* Center team member photos */
+    .member-photo {
+      margin: 0 auto 20px;
+      width: auto;
+    }
+  
+    /* Team member image container */
+    .meet-us-section .image-container {
+      width: 180px;
+      height: 180px;
+    }
+  
+    /* Round image styling */
+    .round-image {
+      width: 180px;
+      height: 180px;
+    }
+  
+    /* Team member info padding */
+    .member-info {
+      padding: 0 15px;
+    }
+
+    /* Biography text styling */
+    .member-bio {
+      text-align: left;
+    }
+  
+    /* Team member name styling */
+    .member-name {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+  
+    /* ========================
+       CONTACT SECTION
+       ======================== */
+    /* Stack contact sections vertically */
+    .contact-content {
+      flex-direction: column;
+    }
+  
+    /* Location and connect section styling */
+    .location-section,
+    .connect-section {
+      margin: 0 0 30px 0;
+      width: 100%;
+      padding: 0 15px;
+    }
+  
+    /* Connect section paragraph styling */
+    .connect-section p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-wrap: wrap;
+    }
+  
+    /* Icon spacing in connect section */
+    .connect-section i {
+      margin-right: 10px; /* Space between icon and text */
+      display: inline-block;
+    }
+  
+    /* Link and text styling in connect section */
+    .connect-section a,
+    .connect-section span {
+      display: inline-block;
+    }
+  
+    /* "New friend" tag styling */
+    .connect-section .new-friend-tag {
+      display: block;
+      width: 100%;
+      margin-top: 5px;
+    }
+  
+    /* Divider styling */
+    .divider {
+      width: 80%;
+      height: 1px;
+      margin: 20px auto;
+      position: static;
+    }
+  
+    /* Center-align connect section text */
+    .connect-section p {
+      margin-left: 0;
+      justify-content: center;
+      text-align: center;
+    }
+  
+    /* Center location content */
+    .location-content {
+      align-items: center;
+    }
+  
+    /* ========================
+       VIDEO SECTION
+       ======================== */
+    /* Responsive video container */
+    .full-width-video-container {
+      height: auto;
+    }
+  
+    /* Video element sizing */
+    #dpcVideo {
+      height: auto;
+    }
+  
+    /* Play button styling for better visibility on mobile */
+    .video-play-button {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .video-play-button span {
+      font-size: 30px;
+    }
+  }
+  
+  /* ========================
+     SMALL PHONES (480px)
+     ======================== */
+  @media (max-width: 480px) {
+    /* Membership and forms sections */
+    .membership-section,
+    .forms-section {
+      padding: 40px 15px;
+    }
+  
+    /* Section titles */
+    .membership-section .section-title,
+    .forms-section .section-title {
+      font-size: 24px;
+    }
+  
+    /* Membership details text */
+    .membership-rate,
+    .membership-benefits {
+      font-size: 14px;
+    }
+  
+    /* Forms intro text */
+    .forms-intro {
+      font-size: 14px;
+    }
+  
+    /* Form link buttons */
+    .form-link {
+      padding: 12px 20px;
+      font-size: 14px;
+    }
+  
+    /* Testimonials section */
+    .testimonials {
+      padding: 40px 0;
+    }
+  
+    /* Line height for senior health service */
+    .service-item:nth-child(5) .column p {
+      line-height: 1.2;
+    }
+  
+    /* Testimonial heading */
+    .testimonials h2 {
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 1.2rem;
+    }
+  
+    /* Testimonial padding */
+    .testimonial {
+      padding: 0 15px;
+    }
+  
+    /* Testimonial text */
+    .testimonial p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+  
+    /* Quotation marks for testimonials */
+    .testimonial p::before,
+    .testimonial p::after {
+      font-size: 1.8rem;
+      vertical-align: -10px;
+    }
+  
+    /* Testimonial author */
+    .testimonial-author {
+      font-size: 0.85rem;
+    }
+  
+    /* Slider controls */
+    .slider-controls {
+      width: 105%;
+      left: -2.5%;
+    }
+  
+    /* Slider buttons */
+    .slider-controls button {
+      width: 30px;
+      height: 30px;
+      font-size: 0.9rem;
+    }
+  
+    /* Testimonial navigation dots */
+    .testimonial-dot {
+      width: 12px;
+      height: 12px;
+      margin: 0 8px;
+      border-radius: 50%;
+      background-color: #d1cfb9;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  
+    /* Services section */
+    .services-section {
+      padding: 30px 0;
+    }
+  
+    /* Section title */
+    .section-title {
+      margin-bottom: 25px;
+      font-size: 22px;
+    }
+  
+    /* Image container dimensions */
+    .image-container {
+      width: 160px;
+      height: 160px;
+    }
+  
+    /* Service content styling */
+    .service-content {
+      padding: 30px 50px 50px;
+      transform: translateY(10px);
+    }
+  
+    /* Service headings */
+    .service-content h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  
+    /* Service text */
+    .service-content p {
+      margin: 5px 10px;
+      font-size: 11px;
+      line-height: 1.5;
+    }
+  
+    /* Content columns */
+    .content-columns {
+      margin-bottom: 8px;
+    }
+  
+    /* Team member photo */
+    .member-photo {
+      margin: 0 auto 20px;
+      width: auto;
+    }
+  
+    /* Team member name */
+    .member-name {
+      font-size: 1.1rem;
+    }
+  
+    /* Team member bio */
+    .member-bio {
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+  
+    /* Column paragraph margins */
+    .column p {
+      margin: 3px 0;
+    }
+  
+    /* Round image dimensions */
+    .round-image {
+      width: 160px;
+      height: 160px;
+    }
+  
+    /* Team member name */
+    .member-name {
+      font-size: 1.1rem;
+    }
+  
+    /* Team member bio */
+    .member-bio {
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+  
+    /* Stack contact info vertically */
+    .connect-section p {
+      flex-direction: column;
+      margin-bottom: 25px;
+    }
+  
+    /* Icons in connect section */
+    .connect-section i {
+      margin-bottom: 5px;
+    }
+  
+    /* New friend tag styling */
+    .new-friend-tag {
+      margin-top: 5px;
+      margin-left: 0;
+    }
+  }
+  
+  /* ========================
+     VERY SMALL PHONES (375px)
+     ======================== */
+  @media (max-width: 375px) {
+    /* Testimonials section */
+    .testimonial-slider {
+      max-width: 95%;
+      min-height: 220px;
+    }
+  
+    /* Testimonial padding */
+    .testimonial {
+      padding: 0 10px;
+    }
+  
+    /* Testimonial text */
+    .testimonial p {
+      font-size: 0.85rem;
+    }
+  
+    /* Services section */
+    .image-container {
+      height: 220px;
+    }
+  
+    /* Service content padding */
+    .service-content {
+      padding: 15px 10px;
+    }
+  
+    /* Service headings */
+    .service-content h3 {
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+  
+    /* Service text */
+    .service-content p {
+      margin: 3px 5px;
+      font-size: 10px;
+    }
+  
+    /* Column paragraph margins */
+    .column p {
+      margin: 2px 0;
+    }
+  
+    /* Footer note */
+    .footer-note {
+      font-size: 10px;
+      margin-top: 3px;
+    }
+  }

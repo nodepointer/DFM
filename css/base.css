@@ -1,0 +1,44 @@
+/* 
+ * Dalton's Family Medicine
+ * Base Styles - Variables, Reset, Typography
+ */
+
+/* Color Variables - Defines the main color palette for the website */
+:root {
+  --color-brown: #302720;    /* Dark brown, likely used for primary headers or accents */
+  --color-cream: #d1cfb9;    /* Cream/beige color, probably for backgrounds or secondary elements */
+  --color-green: #4b5943;    /* Muted green, could be used for buttons or highlights */
+  --color-gray: #3d3e40;     /* Dark gray, likely for main text content */
+  --color-light-gray: #62625e;  /* Light gray, probably for secondary text or borders */
+}
+
+/* Reset and Base Styles - Normalizes browser defaults and sets foundational styles */
+* {
+  margin: 0;                 /* Removes default margins */
+  padding: 0;                /* Removes default padding */
+  box-sizing: border-box;    /* Makes elements include padding and border in their width/height calculations */
+  font-family: "Helvetica Neue", Arial, sans-serif;  /* Sets the default font family with fallbacks */
+}
+
+body {
+  color: var(--color-gray);  /* Sets the default text color using the CSS variable */
+  line-height: 1.6;          /* Sets comfortable line height for readability */
+  margin: 0;                 /* Ensures no margin on the body (redundant with reset above) */
+  padding: 0;                /* Ensures no padding on the body (redundant with reset above) */
+  overflow-x: hidden;        /* Prevents horizontal scrolling */
+}
+
+a {
+  text-decoration: none;     /* Removes underlines from all links */
+  color: inherit;            /* Makes links inherit their parent's text color */
+}
+
+img {
+  max-width: 100%;           /* Makes images responsive, preventing them from overflowing containers */
+  height: auto;              /* Maintains image aspect ratio */
+}
+
+/* Class for when the header is fixed/sticky */
+body.sticky-header {
+  padding-top: 250px;        /* Adds padding to the top of the body to compensate for the fixed header height */
+}
